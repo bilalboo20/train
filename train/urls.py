@@ -3,7 +3,7 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns=[
-    path('home/', views.home_page,name='home'),
+    path('index/', views.home_page,name='index'),
     path('AIdetales/', views.AIdetales, name='AIdetales'),
     path('AIbad/', views.AIbad, name='AIbad'),
     path('contact/', views.contact, name='contact'),

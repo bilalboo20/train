@@ -1,0 +1,242 @@
+/* Start Variables */
+:root {
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* Start Components */
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  width: 120px;
+}
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  bottom: -38px;
+  background-color: white;
+}
+.main-heading p {
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  color: #777;
+}
+/* End Components */
+
+header {
+  position: relative;
+  background: #777;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+header .logo {
+  margin-right: auto;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Rubik";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.4s;
+}
+
+header nav a:hover {
+  color: var(--main-color);
+}
+
+/* Adjust main content to accommodate the sidebar */
+.main-content {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+/* Start Sidebar */
+.sidebar {
+  position: fixed; /* Change position to fixed */
+  width: 250px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #111;
+  padding-top: 50px;
+  z-index: 998; /* Set z-index lower than header to ensure it's behind the header */
+}
+
+.sidebar h1 {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Rubik";
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 0;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 20px;
+  color: #bbb;
+  text-decoration: none;
+  font-family: "Rubik";
+  letter-spacing: 2px;
+}
+
+.sidebar a:hover {
+  color: #fff;
+  margin-left: 20px;
+  transition: 0.4s;
+}
+
+/* Adjust main content to accommodate the sidebar */
+.main-content {
+  margin-left: 250px; /* Adjust this value according to your sidebar width */
+  padding-left: 20px; /* Add padding to the left to avoid content being hidden behind the sidebar */
+}
+/* End Sidebar */
+
+/* Start Footer */
+.footer {
+  padding-top: 10px; /* Reduced padding-top */
+  padding-bottom: 10px; /* Reduced padding-bottom */
+  background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+  position: fixed; /* Fixed position */
+  bottom: 0; /* Positioned at the bottom */
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+
+.footer .container {
+  position: relative;
+}
+
+.footer img {
+  margin-bottom: 5px; /* Reduced margin-bottom for the image */
+}
+
+.footer p:not(.copyright) {
+  text-transform: uppercase;
+  padding: 5px; /* Reduced padding for other paragraph elements */
+  border-bottom: 1px solid white;
+  font-size: 16px; /* Reduced font size for paragraph elements */
+  width: fit-content;
+  margin: 5px auto; /* Reduced margin for other paragraph elements */
+}
+
+.footer .social-icons i {
+  padding: 3px 5px; /* Reduced padding for social icons */
+}
+
+.footer .copyright {
+  margin-top: 5px; /* Reduced margin-top for the copyright */
+}
+
+.footer .copyright span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+/* End Footer */
+
+

@@ -1,35 +1,69 @@
-<!-- base.html -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Django Project{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <!-- Add your CSS or other meta tags here -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Title{% endblock %}</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="{% static 'normalize.css' %}" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="{% static 'all.min.css' %}" />
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}" /> <!-- Changed CSS file name to styles.css -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    {% include 'header.html' %}
-    {% include 'sidebar.html' %}
-    <div class="content">
-        {% block content %}
-        <!-- Content of specific pages goes here -->
-        {% endblock %}
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img decoding="async" src="{% static 'images/ailogo.jpeg' %}" height="60" width="40" alt="Logo" />
+            </a>
+            <nav>
+                <i class="fas fa-bars toggle-menu"></i>
+
+                <a class="active" href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about_us' %}">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
+
+                <div class="form">
+                    <i class="fas fa-search"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start sidbar -->
+    <div class="sidebar">
+      <h1>AI</h1>
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'AIbad' %}">AI Disadvantage</a>
+      <a href="{% url 'AIdetales' %}">AI Details</a>
+      
     </div>
-    {% include 'footer.html' %}
+    <!-- End sidebar -->
 
-    <main class="main">
-        
-    </main>
+    {% block content %}
+    {% endblock %}
 
-    <footer class="footer">
-        <!-- Your footer content goes here -->
-        
-        <p>Footer Content</p>
-    </footer>
-    
-
-    <!-- Add your JavaScript or other scripts here -->
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <img decoding="async" src="{% static 'images/ailogo.jpeg' %}" height="60" width="40" alt="Logo" />
+            <p>AI beauty</p>
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-home"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+            <p class="copyright">&copy; {% now 'Y' %} <span>styles</span> All Right Reserved</p>
+        </div>
+    </div>
+    <!-- End Footer -->
 </body>
 </html>
