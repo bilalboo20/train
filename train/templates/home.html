@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}AI Benefits Slideshow{% endblock %}
+{% block sidebar %}
+    <!-- Sidebar content specific to AIbad page -->
+    <h2>Sidebar Content for AIbad Page</h2>
+    <ul>
+        <li><a href="{% url 'AIdetales' %}">AI Details</a></li>
+        <li><a href="{% url 'AIbad' %}">AI bad</a></li>
+        <li>Link 3</li>
+    </ul>
+{% endblock %}
+{% block content %}
+<div class="slideshow-container">
+  <!-- Slideshow images -->
+  <div class="mySlides">
+    <img src="{% static 'images/ai1.jpeg' %}" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="{% static 'images/ai2.jpeg' %}" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="{% static 'images/ai3.jpeg' %}" style="width:100%">
+  </div>
+
+  <!-- Navigation dots -->
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+<div>
+  <!-- Text discussing AI benefits -->
+  <h2>Benefits of AI</h2>
+  <p>AI offers numerous benefits such as:</p>
+  <ul>
+    <li>Automation of repetitive tasks</li>
+    <li>Improved decision-making through data analysis</li>
+    <li>Enhanced efficiency and productivity</li>
+    <li>Personalized user experiences</li>
+    <!-- Add more benefits as needed -->
+  </ul>
+</div>
+
+<!-- Button to load the next page -->
+<button onclick="loadNextPage()">Go to Next Page</button>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+  // Function to load the next page
+  function loadNextPage() {
+    window.location.href = "{% url 'AIdetales' %}";
+  }
+</script>
+{% endblock %}
+
+
+

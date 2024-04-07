@@ -1,0 +1,35 @@
+<!-- base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Project{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Add your CSS or other meta tags here -->
+</head>
+<body>
+    {% include 'header.html' %}
+    {% include 'sidebar.html' %}
+    <div class="content">
+        {% block content %}
+        <!-- Content of specific pages goes here -->
+        {% endblock %}
+    </div>
+    {% include 'footer.html' %}
+
+    <main class="main">
+        
+    </main>
+
+    <footer class="footer">
+        <!-- Your footer content goes here -->
+        
+        <p>Footer Content</p>
+    </footer>
+    
+
+    <!-- Add your JavaScript or other scripts here -->
+</body>
+</html>

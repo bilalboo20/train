@@ -1,0 +1,19 @@
+<!-- header.html -->
+{% load static %}
+
+<header class="header">
+    <div class="logo">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'images/ailogo.jpeg' %}" alt="Logo" style="height: 50px; width: auto;">
+        </a>
+    </div>
+    <div class="navigation">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="{% url 'about_us' %}">About Us</a></li>
+                <li class="nav-item"><a href="{% url 'contact' %}">Contact</a></li>
+                <!-- Add more links if needed -->
+            </ul>
+        </nav>
+    </div>
+</header>

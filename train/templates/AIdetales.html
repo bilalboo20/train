@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}AI Details{% endblock %}
+
+{% block sidebar %}
+    <!-- Sidebar content specific to AIdetales page -->
+    <h2>Sidebar Content for AIdetales Page</h2>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'AIbad' %}">AI Disadvantages</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <!-- Content specific to AIdetales page -->
+    <h1>Details About Artificial Intelligence</h1>
+    
+    <!-- Introduction to AI -->
+    <h2>What is Artificial Intelligence?</h2>
+    <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and act like humans. These machines are designed to perform tasks that typically require human intelligence, such as learning, problem-solving, decision-making, and language understanding.</p>
+    
+    <!-- Advantages of AI -->
+    <h2>Advantages of AI</h2>
+    <ul>
+        <li>Automation of repetitive tasks, leading to increased efficiency and productivity.</li>
+        <li>Improved decision-making through data analysis and pattern recognition.</li>
+        <li>Enhanced user experiences through personalized recommendations and interactions.</li>
+        <!-- Add more advantages as needed -->
+    </ul>
+    
+    <!-- Disadvantages of AI -->
+    <h2>Disadvantages of AI</h2>
+    <ul>
+        <li>Job displacement and unemployment due to automation.</li>
+        <li>Privacy concerns related to the collection and use of personal data.</li>
+        <li>Algorithm bias leading to unfair or discriminatory outcomes.</li>
+        <li>Dependency on AI systems and potential reliability issues.</li>
+        <li>Ethical dilemmas surrounding AI decision-making and misuse of technology.</li>
+        <!-- Add more disadvantages as needed -->
+    </ul>
+    
+    <!-- Future of AI -->
+    <h2>The Future of Artificial Intelligence</h2>
+    <p>Despite its challenges, AI continues to advance rapidly, with potential applications across various industries, including healthcare, finance, transportation, and more. As technology evolves, it's essential to address ethical, legal, and societal implications to ensure responsible and beneficial deployment of AI.</p>
+    
+    <!-- Links or references for further reading -->
+    <h2>Further Reading</h2>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">Wikipedia: Artificial Intelligence</a></li>
+        <!-- Add more links as needed -->
+    </ul>
+    
+    <!-- Button to go to the next page -->
+    
+
+    <script>
+        // Function to redirect to the AIbad page (disadvantages)
+        function goToNextPage() {
+            window.location.href = "{% url 'AIbad' %}";
+        }
+    </script>
+{% endblock %}

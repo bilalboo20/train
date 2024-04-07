@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Disadvantages of AI{% endblock %}
+
+{% block sidebar %}
+    <!-- Sidebar content specific to AIbad page -->
+    <h2>Sidebar Content for AIbad Page</h2>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'AIdetales' %}">AI Details</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <!-- Content specific to AIbad page -->
+    <div>
+        <!-- Title -->
+        <h1>Disadvantages of AI</h1>
+        
+        <!-- List of disadvantages -->
+        <ul>
+            <li>Job Displacement: AI and automation can lead to job losses in certain industries, as machines and algorithms replace human workers.</li>
+            <li>Privacy Concerns: AI systems often rely on large amounts of data, raising concerns about privacy and data security.</li>
+            <li>Algorithm Bias: AI algorithms may exhibit bias, leading to unfair or discriminatory outcomes, especially in areas like hiring or lending.</li>
+            <li>Dependency and Reliability: Overreliance on AI systems can lead to dependency issues, and these systems may not always be reliable or accurate.</li>
+            <li>Ethical Dilemmas: AI raises complex ethical questions, such as responsibility for AI decisions and the potential for misuse of AI technology.</li>
+            <!-- Add more disadvantages as needed -->
+        </ul>
+        
+        <!-- Additional text or information -->
+        <p>While AI offers many benefits, it's important to consider and address its potential disadvantages to ensure responsible and ethical development and use of AI technology.</p>
+    </div>
+{% endblock %}
+

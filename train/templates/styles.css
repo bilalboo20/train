@@ -1,0 +1,94 @@
+/* Add this CSS to your styles.css file or within <style> tags in your HTML */
+/* styles.css */
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding around the header content */
+}
+
+.logo {
+    /* Adjust margin, padding, or other styles for logo container */
+}
+
+.navigation {
+    /* Adjust margin, padding, or other styles for navigation container */
+}
+
+.nav-list {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+}
+
+.nav-item {
+    margin-right: 15px; /* Add spacing between navigation items */
+}
+
+.nav-item:last-child {
+    margin-right: 0; /* Remove margin from last item */
+}
+
+.nav-item a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    /* Add additional styles as needed */
+}
+
+
+
+
+/* styles.css */
+.sidebar {
+    position: fixed;
+    top: 40px; /* adjust this according to your header height */
+    left: 0;
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+.sidebar-menu {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px; /* Add spacing between menu items */
+}
+
+.sidebar-menu li a {
+    display: block; /* Make the links fill the entire width of the sidebar */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color for links */
+    padding: 5px; /* Add padding to links for better spacing */
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.sidebar-menu li a:hover {
+    background-color: #ddd; /* Change background color on hover */
+}
+
+
+
+
+.footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding around the footer content */
+    text-align: center; /* Center align footer content */
+}
+
+.social-icons {
+    margin-top: 10px; /* Add some space between copyright notice and social icons */
+}
+
+.social-icon {
+    color: #fff; /* White color for social media icons */
+    font-size: 24px; /* Adjust icon size as needed */
+    margin: 0 5px; /* Add some space between social media icons */
+}
